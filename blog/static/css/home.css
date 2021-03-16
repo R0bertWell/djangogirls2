@@ -29,7 +29,7 @@ header{
 
 .logo h2{
     font-weight: normal;
-    font-size: 22px;
+    font-size: 30px;
 }
 
 .menu{
@@ -111,7 +111,7 @@ section.main-content{
 
 .diferencial-single{
     background-color: rgb(255, 255, 255);
-    border-radius: 200px;
+    border-radius: 600px;
     width: 24%;
     margin: 0 auto;
     padding: 50px 20px;
@@ -145,5 +145,16 @@ section.main-content{
     .diferencial-single{
         margin-bottom: 20px;
         width: 100%
+    }
+}
+
+@media screen and (max-width: 1920px){
+    .center{
+        max-width: 100%;
+        height: 80%:
+        margin: 0 auto;
+        padding: 0 2%;
+        display: flex;
+        flex-wrap: wrap;
     }
 }

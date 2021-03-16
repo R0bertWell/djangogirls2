@@ -1,0 +1,127 @@
+html, body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(218, 219, 212);
+}
+
+*{
+    text-decoration:none;
+}
+
+.background-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+.background-grid .bg-1{
+    background-color: rgb(0, 150 ,136);
+    height: 50px;
+    width: 100%;
+}
+
+.grid-container{
+    margin: 0 auto;
+    display: grid;
+    width: 90%;
+    height: 100%;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 10vh 90vh;
+    border: 1px solid white;
+    grid-template-areas: "header maintitle"
+                        "aside main";
+}
+
+.main-header-post{
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 4px -2px #989898;
+    -moz-box-shadow: 0 4px 4px -2px #989898;
+    -webkit-box-shadow: 0 4px 4px -2px #989898;
+    background-color: rgb(237, 237, 237);
+    grid-area: header;
+}
+
+.main-post-title{
+    background-color: rgb(237, 237, 237);
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 4px -2px #989898;
+    -moz-box-shadow: 0 4px 4px -2px #989898;
+    -webkit-box-shadow: 0 4px 4px -2px #989898;
+    grid-area: maintitle;
+}
+
+.main-header-post .center .logo-menu h2{
+    font-size: 20px;
+}
+
+.main-header-post .center .logo-menu{
+    margin-left: 20px;
+    font-size: 10px;
+}
+.main-header-post .center .menu{
+
+ }
+
+main{
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 4px -2px #989898;
+    -moz-box-shadow: 0 4px 4px -2px #989898;
+    -webkit-box-shadow: 0 4px 4px -2px #989898;
+    background-image: url('/static/images/sky-bg.jpg');
+    overflow-y: scroll;
+    background-color: white;
+    grid-area: main;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+}
+''
+.main-aside-post{
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 4px -2px #989898;
+    -moz-box-shadow: 0 4px 4px -2px #989898;
+    -webkit-box-shadow: 0 4px 4px -2px #989898;
+    overflow-y: scroll;
+    background-color:white;
+    grid-area: aside;
+}
+
+.post-resume{
+    margin-left: 5px;
+    height: 15%;
+    border-bottom: 1px solid black;
+}
+
+.post-full{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.post-full-top{
+    margin-left:10px;
+    background-position: top;
+    background-attachment: fixed;
+    height: 50px;
+    background-color: rgb(237, 237, 237);
+}
+
+.post-full-top p{
+    font-size: 10px;
+}
+
+.main-aside-post .post-resume p{
+    font-size: 10px;
+}
+
+.main-aside-post .post-resume h2{
+    font-size: 20px;
+}
