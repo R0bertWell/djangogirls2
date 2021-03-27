@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.center-logo{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.center{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+header{
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(200,200,200);
+}
+
+.logo h2{
+    color: #16507b;
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.menu{
+    float: left;
+    width: 80%;
+    text-align: right;
+}
+
+.menu a{
+    color: #124265;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: 0.4s;
+}
+
+.menu a:hover{
+    color: #007bff
+}
+
+/* grid about */
+
+.main-about-me-grid{
+    display: grid;
+    grid-templates-colums: 1fr 3fr;
+    grid-template-areas: "aside main main main"
+}
+
+.main-about-me-grid .aside-about-me{
+    grid-area: "aside";
+}
+
+.main-about-me-grid .main-about-me{
+    grid-area: "main";
+}
+
+.my-photo img{
+    border: none;
+    width: 300px;
+    height: 300px;
+    border-radius: 1000px;
+}
+
+section.main-content{
+    background-image: url('/static/images/progamming-bg.jpg');
+    padding: 50px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main__cta{
+    width: 100%;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.main__cta h2{
+    color: #3c698b;
+    font-size: 45px;
+}
+
+.main__cta p{
+    color: gray;
+    font-size: 19px;
+    margin: 10px 0;
+}
+
+.bg-whoami{
+    margin-top: 150px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.bg-whoami h1{
+    margin-bottom: 20px;
+}
+
+.i-am{
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+}
+
+.i-am-left{
+    margin-right: 10px;
+    margin-left: 20px;
+    grid-area: "left";
+    font-size: 15px;
+}
+.i-am-right{
+    margin-left: 10px;
+    margin-right: 20px;
+    grid-area: "right";
+    font-size: 15px;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 768px){
+    .center{
+        justify-content: center;
+    }
+
+    .menu{
+        text-align: center;
+
+    }
+
+    .menu a{
+        margin-right: 40px;
+    }
+}

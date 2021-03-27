@@ -5,6 +5,10 @@ from .forms import PostForm
 from django.shortcuts import redirect
 
 
+def post_about(request):
+    return render(request, 'blog/about.html', {})
+
+
 def post_home(request):
     return render(request, 'blog/home.html', {})
 

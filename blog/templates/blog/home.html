@@ -2,74 +2,121 @@
 {% load static %}
 <html>
 <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&;700display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="{% static '/css/home.css' %}" rel="stylesheet">
-    <title>R0bert.code</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&amp;;700display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-    <header class="main-header">
-
-        <div class="center">
-            <div class="logo">
-                <h2>R0bert.code</h2>
-            </div><!--logo-->
-            <div class="menu">
-                <a href="#">
-                    Home
-                </a>
-                <a href="#">
-                    Sobre
-                </a>
-                <a href="#">
-                    Contato
-                </a>
-                <a href="blog/">
-                    Blog
-                </a>
-                <!--<a class="btn-menu" href="#">
-                    Get Started
-                </a>-->
-            </div>
-        </div><!--center-->
+    <header>
+        <h2>R0bert.code</h2>
+        <nav>
+            <li><a href="">Home</a></li>
+            <li><a href="#section-study">Estudos</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="blog/">Blog</a></li>
+        </nav>
     </header>
-
-
-    <section class="main-content">
-        <div class="center">
-            <div class="main__cta">
-                <h2>Wellington : My Profiles</h2>
-                <p>I am r0bertwell  -dev</p>
-                <button class="btn-get-started">Go to projects</button>
-            </div><!--main-cta-->
-
-            <div class="diferenciais">
-                    <div class="diferencial-single">
-                        <a href="https://github.com/r0bertwell">
-                        <i id="github-icon" class="fab fa-github"></i>
-                        <h2>GitHub</h2>
-                        <p>github.com/r0bertwell</p>
-                        </a>
-                    </div><!--diferencial single-->
-                <div class="diferencial-single">
-                    <a href="https://www.linkedin.com/in/r0bertwell/"><i id="linkedin-icon" class="fab fa-linkedin"></i></a>
-                    <h2>LinkedIn</h2>
-                    <p>www.linkedin.com/in/r0bertwell</p>
-                </div><!--diferencial single-->
-                <div class="diferencial-single">
-                    <a href="https://www.instagram.com/r0bertwell/"><i id="instagram-icon" class="fab fa-instagram-square"></i></a>
-                    <h2>Instagram</h2>
-                    <p>instagram.com/r0bertwell</p>
-                </div><!--diferencial single-->
-                <div class="diferencial-single">
-                    <a href=""><i id="youtube-icon" class="fab fa-youtube-square"></i></a>
-                    <h2>Youtube</h2>
-                    <p>youtube.com/r0bertwell</p>
-                </div><!--diferencial single-->
-            </div><!--diferenciais-->
+    <section class="hero-bg">
+        <img src="/static/images/my-photo.png" alt="my-photo">
+        <h2>Wellington : My Profiles</h2>
+        <p>I am r0bertwell -dev</p>
+        <nav>
+            <li>
+                <a href="https://github.com/r0bertwell" target="_blank"><i id="github" class="fab fa-github-square"></i></a>
+                <p>GitHub</p>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/r0bertwell/" target="_blank"><i id="instagram" class="fab fa-instagram-square"></i></a>
+                <p>Instagram</p>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/r0bertwell/" target="_blank"><i id="linkedin" class="fab fa-linkedin"></i></a>
+                <p>LinkedIn</p>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/dr4gongames" target="_blank"><i id="youtube" class="fab fa-youtube"></i></a>
+                <p>Youtube</p>
+            </li>
+        </nav>
+    </section>
+    <section class="section-studying">
+        <a name="section-study"></a>
+        <h2>Oque estou aprendendo ?</h2>
+        <p><strong>"Oque estou estudando ou ja estudei." </strong><br>
+            Obviamente os que estudei significa que dei uma parada
+            por questões de estar aprendendo novas coisas.
+        </p>
+        <hr>
+        <h3>Linguagens de programação</h3>
+        <div class="estudos-linguagem">
+                <li>
+                    <i class="fab fa-python"></i>
+                    <h3 id="python-study" class="title-estudo">Python</h3>
+                    <p>Estudando</p>
+                </li>
+                <li>
+                    <i class="fab fa-java"></i>
+                    <h3 id="java-study" class="title-estudo">Java</h3>
+                    <p>Estudei</p>
+                </li>
+                <li>
+                    <i class="fab fa-html5"></i>
+                    <h3 id="html-study" class="title-estudo">HTML</h3>
+                    <p>Estudando</p>
+                </li>
+                <li>
+                    <i class="fab fa-css3-alt"></i>
+                    <h3 id="css-study" class="title-estudo">CSS</h3>
+                    <p>Estudando</p>
+                </li>
+                <li>
+                    <i class="fab fa-js"></i>
+                    <h3 id="js-study" class="title-estudo">javascript</h3>
+                    <p>Estudando</p>
+                </li>
         </div>
-    </section><!--section-->
-
-    <script src="https://kit.fontawesome.com/16544f2866.js"></script>
+        <hr>
+        <h3>Frameworks</h3>
+        <div class="estudos-frameworks">
+            <li>
+                <i class="fab fa-python"></i>
+                <h3 id="django-study" class="title-estudo">Django</h3>
+                <p>Estudando</p>
+            </li>
+        </div>
+        <hr>
+        <h3>Banco de dados</h3>
+        <div class="estudos-db">
+            <li>
+                <i class="fas fa-database"></i>
+                <h3 id="mysql-study" class="title-estudo">MySql</h3>
+                <p>Estudei</p>
+            </li>
+            <li>
+                <i class="fas fa-republican"></i>
+                <h3 id="postgree-study" class="title-estudo">PostgreeSQL</h3>
+                <p>Estudando</p>
+            </li>
+        </div>
+        <hr>
+        <div class="projetos">
+            <a name="projetos"></a>
+            <h2>Projetos</h2>
+            <p>building the site to show XD</p>
+            <p>...</p>
+        </div>
+        <hr>
+    </section>
+    <footer class="about-me">
+        <a name="about"></a>
+        <h2>About me</h2>
+        <p>Eae, meu nome é wellington, tenho 19 anos e atualmente estudo na Unifavip de Caruaru-PE, cursando Análise e desenvolvimento de sistemas.</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/51f7ea6787.js" crossorigin="anonymous"></script>
 </body>
 </html>

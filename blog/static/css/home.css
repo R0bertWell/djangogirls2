@@ -1,160 +1,330 @@
+/* RESETS */
 *{
     margin: 0;
     padding: 0;
+    font-size: 100%;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', 'sans-serif';
 }
 
 a{
     text-decoration: none;
 }
 
-.center{
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 2%;
-    display: flex;
-    flex-wrap: wrap;
+nav, lu, li{
+    list-style: none;
 }
+
+/* HEADER */
 
 header{
-    background-color: white;
-    padding: 20px 0;
-    border-bottom: 1px solid rgb(200,200,200);
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
 }
 
-.logo{
-    color: #16507b;
+header h2{
+    color: rgb(22, 80, 123);
+    font-size: 35px;
 }
 
-.logo h2{
-    font-weight: normal;
-    font-size: 30px;
+nav{
+    display: flex;
 }
 
-.menu{
-    width: 80%;
-    text-align: right;
+nav li a{
+    opacity: 0.9;
 }
 
-.menu a{
-    color: #124265;
-    font-size: 14px;
-    text-decoration: none;
-    margin-right: 20px;
-    transition: 0.4s;
+nav li a:hover{
+    opacity: 1;
+    color: rgb(30, 146, 241);
 }
 
-.menu a:hover{
-    color: #007bff
+nav li{
+    font-size: 20px;
+    margin: 0 15px;
 }
 
-.menu .btn-menu{
-    background-color: #007bff;
-    display: inline-block;
-    padding: 8px 16px;
-    color: white;
-    border-radius: 5px;
+nav li:first-child{
+    margin-left: 0;
 }
 
-.menu .btn-menu:hover{
-    background-color: #124265;
-    color: white;
+nav li:last-child{
+    margin-right: 0;
 }
 
-/*
-Section main content
-*/
+/* Media Query header */
 
-section.main-content{
-    background-image: url('/static/images/progamming-bg.jpg');
-    padding: 50px 0;
-    background-position: center;
-    background-size: cover;
+@media (max-width: 768px){
+    header{
+        flex-direction: column;
+    }
+
+    header h2{
+        font-size: 2rem;
+    }
+
+    header nav li{
+        font-size: 1.4rem;
+    }
+}
+
+/* HERO BG */
+
+.hero-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
+    background-image: url('/static/images/progamming-bg.jpg');
+
+    min-height: 100vh;
 }
 
-.main__cta{
-    width: 100%;
-    margin: 60px 0;
-    text-align: center;
+.hero-bg img{
+    border: 3px solid rgb(60, 105, 139);
+    border-radius: 50%;
+    margin-top: 150px;
+    width: 250px;
+    height: 250px;
 }
 
-.main__cta h2{
-    color: #3c698b;
-    font-size: 40px;
+.hero-bg h2{
+    font-size: 50px;
+    color: rgb(60, 105, 139);
 }
 
-.main__cta p{
-    color: gray;
-    font-size: 19px;
-    margin: 10px 0;
+.hero-bg p{
+    font-size: 20px;
+    color: grey;
+    margin-bottom: 40px;
 }
 
-.main__cta button{
-    background-color: #007bff;
-    display: inline-block;
-    padding: 8px 30px;
-    color: white;
-    border-radius: 5px;
-    border: 0;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.diferenciais{
-    width: 100%;
+.hero-bg nav{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.diferencial-single{
-    background-color: rgb(255, 255, 255);
-    border-radius: 600px;
-    width: 24%;
-    margin: 0 auto;
-    padding: 50px 20px;
-    text-align: center;
+.hero-bg nav li{
+    opacity: 0.8;
+    margin: 10px 80px;
 }
 
-.diferencial-single:hover{
-    cursor: pointer;
-    background-color: rgb(200, 198, 228);
+.hero-bg nav li:hover{
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.4);
 }
 
-.diferencial-single i{
-    color: rgb(40, 26, 114);
+.hero-bg nav li a i{
     font-size: 100px;
 }
 
-
-.diferencial-single h2{
-    color: rgb(65, 99, 201);
-    margin: 10px 0;
-    font-size: 17px;
+#github{
+    color: rgb(255, 255, 255);
 }
 
-.diferencial-single p{
-    color: rgb(36, 33, 54);
-    font-size: 14px;
-    line-height: 25px;
+#instagram{
+    color: rgb(196, 91, 5);
 }
 
-@media screen and (max-width: 768px){
-    .diferencial-single{
-        margin-bottom: 20px;
-        width: 100%
+#linkedin{
+    color: rgb(14, 69, 187);
+}
+
+#youtube{
+    color: red;
+}
+
+
+/* Media HERO */
+
+@media (max-width: 768px){
+    .hero-bg{
+        background-position: center;
+    }
+    .hero-bg nav{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .hero-bg nav li a i{
+        font-size: 200px;
     }
 }
 
-@media screen and (max-width: 1920px){
-    .center{
-        max-width: 100%;
-        height: 80%:
-        margin: 0 auto;
-        padding: 0 2%;
-        display: flex;
-        flex-wrap: wrap;
-    }
+/* Section Studying */
+
+.section-studying{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.section-studying h2{
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.section-studying p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.section-studying hr{
+    width: 200px;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 70px;
+    border: none;
+}
+
+.section-studying h3{
+    font-size: 35px;
+    color: rgb(34, 86, 197);
+    margin-bottom: 50px;
+}
+
+/* Estudo linguagem */
+
+.section-studying .estudos-linguagem{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-studying .estudos-linguagem li{
+    height: 350px;
+    padding: 20px;
+    border-radius: 4px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    flex-basis: 25%;
+}
+
+.section-studying .estudos-linguagem i{
+    font-size: 40px;
+}
+
+#python-study{
+    color: rgb(247, 207, 68);
+}
+
+#java-study{
+    color: red;
+}
+
+#html-study{
+    color:rgb(196, 91, 5);
+}
+
+.fa-html5{
+    color:rgb(226, 147, 0);
+}
+
+#css-study{
+    color: rgb(77, 93, 122);
+}
+
+.fa-css3-alt{
+    color:rgb(55, 78, 180);
+}
+
+#js-study{
+    color: black;
+}
+
+.fa-js{
+    color:rgb(239, 216, 29);
+}
+/* Estudo Framework */
+
+.section-studying .estudos-frameworks{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-studying .estudos-frameworks li{
+    height: 350px;
+    padding: 20px;
+    border-radius: 4px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    flex-basis: 25%;
+}
+
+.section-studying .estudos-frameworks i{
+    font-size: 40px;
+}
+
+/* Estudos DataBase */
+
+.section-studying .estudos-db{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-studying .estudos-db li{
+    height: 350px;
+    padding: 20px;
+    border-radius: 4px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    flex-basis: 25%;
+}
+
+.section-studying .estudos-db i{
+    font-size: 40px;
+}
+
+/* footer about-me */
+
+.about-me{
+    height: 200px;
+    background-color: rgb(55, 78, 180);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.about-me h2{
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+
+.about-me p{
+    font-size: 20px;
+    color : white;
+}
+
+/* Projetos */
+
+.projetos p{
+    margin-bottom: 100px;
 }
